@@ -4,7 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 const last_posts = posts.slice(0, 3);
@@ -17,18 +17,22 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl py-3 font-bold">Senior Software Engineer</div>
     <div class="py-2">
       <text class="text-lg">
-        <div class="text-xl py-1">Making it happen</div>
+        <div class="py-3 font-bold">
+          Got a project Idea? <a class="btn ml-5" href="tel:+23054924242">Let's Talk</a>
+        </div>
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="mailto:prakash.jhugroo@gmail.com"> Let's connect!</a>
       <a
         href="https://github.com/jhugroo"
         target="_blank"
-        class="btn btn-outline ml-5"
+        class="btn btn-outline"
       >
         My Work
       </a>
+      <a class="btn ml-5" href="mailto:prakash.jhugroo@gmail.com">
+        Let's connect!</a
+      >
     </div>
   </div>
 
