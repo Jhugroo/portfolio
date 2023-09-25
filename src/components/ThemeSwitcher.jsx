@@ -3,8 +3,8 @@ import { Theme, Button } from 'react-daisyui'
 import { themeChange } from 'theme-change';
 
 export default () => {
-    const [theme, setTheme] = useState('dracula');
-    const [themeText, setThemeText] = useState('Dark');
+    const [theme, setTheme] = useState('light');
+    const [themeText, setThemeText] = useState('Light');
     useEffect(() => {
         document.querySelector('html')?.setAttribute('data-theme', localStorage.getItem('theme'))
         localStorage.getItem('theme') == 'dracula' ? setThemeText('Light') : setThemeText('Dark');
